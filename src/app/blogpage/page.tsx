@@ -23,12 +23,13 @@ const posts = [
 export default function Home() {
   return (
     <div className="p-8">
-      <h1 className="text-3xl font-bold mb-8 font-serif text-center ">Welcome to the Blog</h1>
+      <h1 className="text-3xl font-bold font-serif text-center ">12 Skincare Products You Need for a Radiant Glow</h1>
+      <p className="text-center text-pink-800 mx-4 mb-8 mt-2">Taking care of your skin is essential for maintaining a healthy and radiant complexion. With so many products on the market, finding the right ones can be overwhelming. To make it easier, here are 12 must-have skincare products to elevate your routine:</p>
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         {posts.map((post) => (
           <Link key={post.slug} href={`/blog/${post.slug}`}>
             <div className="block p-4 border rounded bg-pink-200 shadow-sm hover:shadow-md">
-            <img className="h-[200px] block mx-10 sm:mx-auto rounded-xl  my-6 " src={post.image}></img>
+            <img className="h-[200px] block mx-auto rounded-xl  my-6 " src={post.image}></img>
               <h2 className="text-xl font-semibold">{post.title}</h2>
               <p className="text-gray-600 mt-2">{post.desc}</p>
             </div>
